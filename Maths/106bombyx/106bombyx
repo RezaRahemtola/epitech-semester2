@@ -1,0 +1,24 @@
+#!/usr/bin/python
+from sys import argv
+from error_handling import check_errors
+from functions import first_case, second_case
+
+def display_help():
+    print("""USAGE
+    ./106bombyx n [k | i0 i1]
+DESCRIPTION
+    n number of first generation individuals
+    k growth rate from 1 to 4
+    i0 initial generation (included)
+    i1 final generation (included)""")
+    exit(0)
+
+
+if __name__ == "__main__":
+    if len(argv) == 2 and argv[1] == "-h":
+        display_help()
+    check_errors(argv)
+    if len(argv) == 3:
+        first_case(int(argv[1]), float(argv[2]))
+    elif len(argv) == 4:
+        second_case(int(argv[1]), int(argv[2]), int(argv[3]))
