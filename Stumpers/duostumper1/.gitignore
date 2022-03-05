@@ -1,0 +1,6 @@
+fractals
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+vgcore.*
