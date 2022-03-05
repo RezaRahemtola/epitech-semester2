@@ -24,7 +24,6 @@ CFLAGS      =   -Wall -Wextra
 CPPFLAGS    =   -I include -I lib/my/include
 LDFLAGS     =   -L lib/my
 LDLIBS      =   -lmy
-LDCSFML     =   -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 all:		$(NAME)
 
@@ -57,4 +56,4 @@ gcovr:		tests_run
 
 re:			fclean all
 
-.PHONY: all libs clean fclean debug tests_run re
+.PHONY: all libs clean fclean debug tests_run gcovr re
