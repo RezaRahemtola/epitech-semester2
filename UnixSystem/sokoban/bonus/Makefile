@@ -24,7 +24,7 @@ NAME           =    my_sokoban_bonus
 CC             =    gcc
 CFLAGS         =    -Wall -Wextra
 CPPFLAGS       =    -I include
-LDFLAGS        =    -L lib/my
+LDFLAGS        =    -L ../lib/my
 LDLIBS         =    -lmy -lncurses
 
 all:		$(NAME)
@@ -33,14 +33,14 @@ $(NAME):	$(OBJ) libs
 			$(CC) -o $(NAME) $(OBJ) $(LDFLAGS) $(LDLIBS)
 
 libs:
-			make -C lib/my
+			make -C ../lib/my
 
 clean:
 			$(RM) $(OBJ)
 
 fclean:		clean
 			$(RM) $(NAME)
-			make fclean -C lib/my -s
+			make fclean -C ../lib/my -s
 
 debug:		CFLAGS += -g
 debug:		re
