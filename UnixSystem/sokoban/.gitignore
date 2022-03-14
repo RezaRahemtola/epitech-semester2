@@ -1,0 +1,6 @@
+my_sokoban
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+vgcore.*
