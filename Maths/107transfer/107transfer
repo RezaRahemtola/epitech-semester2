@@ -1,0 +1,47 @@
+#!/usr/bin/python
+from sys import argv
+from error_handling import check_errors
+
+
+def display_help() -> None:
+    print("""USAGE
+    ./107transfer [num den]*
+DESCRIPTION
+    num polynomial numerator defined by its coefficients
+    den polynomial denominator defined by its coefficients""")
+    exit(0)
+
+
+def compute_polynomial(numbers: list, x: int) -> float:
+    result = 0
+
+    for index, nb in enumerate(numbers):
+        result += nb * pow(x / 1000, index)
+    return result
+
+
+def compute_transfer(args: list) -> None:
+    x = 0
+
+    while x <= 1000:
+        i = 0
+        result = 1
+        while i < len(args):
+            list_num = [int(arg) for arg in args[i].split("*")]
+            list_denum = [int(arg) for arg in args[i + 1].split("*")]
+            num = compute_polynomial(list_num, x)
+            denum = compute_polynomial(list_denum, x)
+            if denum == 0:
+                exit(84)
+            result *= (num / denum)
+            i += 2
+        print(f"{x / 1000:.3f} -> {result:.5f}")
+        x += 1
+
+
+if __name__ == "__main__":
+    argc = len(argv)
+    if argc == 2 and argv[1] == "-h":
+        display_help()
+    check_errors(argc, argv)
+    compute_transfer(argv[1:])
