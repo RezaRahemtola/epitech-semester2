@@ -1,5 +1,5 @@
 # First stage - Compilation
-FROM maven:3.5-jdk-8-alpine AS builder
+FROM maven:3.8.4-jdk-11-slim AS builder
 
 WORKDIR /builder
 COPY . .
@@ -8,7 +8,7 @@ RUN mvn package
 
 
 # Second stage - Run
-FROM openjdk:8-jre-alpine
+FROM openjdk:11-jre-slim
 
 WORKDIR /worker
 COPY --from=builder /builder/target .
