@@ -1,0 +1,8 @@
+connect4
+tests/unit_tests
+logs/
+*.o
+*.gcda
+*.gcno
+vgcore.*
+*~
