@@ -1,0 +1,17 @@
+name: Mirroring
+
+on: [push, delete]
+
+jobs:
+  mirroring:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@github.com:EpitechPromo2026/B-DOP-200-PAR-2-1-bschocolatine-reza.rahemtola.git
+          ssh_private_key:
+            ${{ secrets.SSH_PRIVATE_KEY }}
