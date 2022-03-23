@@ -1,0 +1,8 @@
+my_defender
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+vgcore.*
+logs/
+.idea/
