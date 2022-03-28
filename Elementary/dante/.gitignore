@@ -1,0 +1,10 @@
+generator/generator
+solver/solver
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+vgcore.*
+.vscode/
+.idea/
+tinker.py
