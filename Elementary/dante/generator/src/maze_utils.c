@@ -25,5 +25,5 @@ bool is_solution_rounded(maze_t *maze)
     if (maze->height < 3 || maze->width < 3)
         return false;
     return maze->grid[maze->height - 2][maze->width - 1] == WALL &&
-           maze->grid[maze->height - 1][maze->width - 2] == WALL;
+maze->grid[maze->height - 1][maze->width - 2] == WALL;
 }
