@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+from sys import argv
+from error_handling import check_errors
+from utils import create_matrix_from_args
+from calculs import *
+
+
+def display_help() -> None:
+    print("""USAGE
+    ./108trigo fun a0 a1 a2 ...
+DESCRIPTION
+    fun  function to be applied, among at least "EXP", "COS", "SIN", "COSH" and "SINH"
+    ai   coeficients of the matrix""")
+    exit(0)
+
+
+if __name__ == "__main__":
+    argc = len(argv)
+    if argc == 2 and argv[1] == "-h":
+        display_help()
+    check_errors(argc, argv)
+    matrix = create_matrix_from_args(argv[2:])
+    if argv[1] == "EXP":
+        matrix = calc_exp(matrix)
+    if argv[1] == "COS":
+        matrix = calc_cos(matrix)
+    if argv[1] == "SIN":
+        matrix = calc_sin(matrix)
+    if argv[1] == "COSH":
+        matrix = calc_cosh(matrix)
+    if argv[1] == "SINH":
+        matrix = calc_sinh(matrix)
+    print(matrix)
