@@ -1,0 +1,67 @@
+#!/bin/bash
+
+#TEST 1
+
+rm -f crypt
+./cesar -s "aA zZ" 1
+echo -n "bB aA" > reference
+
+difference=`diff crypt reference`
+
+if [ -z "$difference" ]
+then
+    echo "test 1 success"
+else
+    echo "test 1 failure"
+fi
+
+#TEST 2
+
+rm -f crypt
+./cesar -s "aA zZ" -2
+echo -n "yY xX" > reference
+
+difference=`diff crypt reference`
+
+if [ -z "$difference" ]
+then
+    echo "test 2 success"
+else
+    echo "test 2 failure"
+fi
+
+#TEST 3
+
+rm -f crypt
+./cesar -s "aA zZ" 26
+echo -n "bB aA" > reference
+
+difference=`diff crypt reference`
+
+if [ -z "$difference" ]
+then
+    echo "test 3 success"
+else
+    echo "test 3 failure"
+fi
+
+rm reference
+rm -f crypt
+
+#TEST 4
+
+rm -f crypt
+./cesar -s "aA zZ" 10
+echo -n "kK jJ" > reference
+
+difference=`diff crypt reference`
+
+if [ -z "$difference" ]
+then
+    echo "test 4 success"
+else
+    echo "test 4 failure"
+fi
+
+rm reference
+rm -f crypt
