@@ -1,0 +1,9 @@
+tetris
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+logs/
+vgcore.*
+.vscode
+.score
