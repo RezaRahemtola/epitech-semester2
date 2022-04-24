@@ -1,0 +1,10 @@
+my_exec2
+result
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+logs/
+vgcore.*
+.vscode/
+.idea/
