@@ -1,0 +1,9 @@
+lem_in
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+logs/
+vgcore.*
+.vscode/
+.idea/
