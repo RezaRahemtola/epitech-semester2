@@ -1,0 +1,9 @@
+mysh
+tests/unit_tests
+*.o
+*.gcda
+*.gcno
+logs/
+vgcore.*
+.vscode/
+.idea/
