@@ -1,0 +1,15 @@
+ai
+unit_tests/
+CoppeliaSim/
+scene/
+n4s
+n4s_buffer
+pipes.sh
+*~
+*.a
+*.o
+*.gcda
+*.gcno
+*.ttt
+.idea/
+.vscode/

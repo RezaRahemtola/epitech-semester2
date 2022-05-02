@@ -58,6 +58,7 @@ tests_run:	re
 
 debug:		CFLAGS += -g
 debug:		re
+			mkdir -p logs/
 			valgrind --track-origins=yes --leak-check=full \
 			./$(NAME) $(ARGS) 2> logs/valgrind.txt
 
