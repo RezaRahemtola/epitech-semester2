@@ -1,0 +1,13 @@
+my_rpg
+tests/unit_tests
+CMakeLists.txt
+*~
+*.a
+*.o
+*.gcda
+*.gcno
+vgcore.*
+logs/
+.idea/
+.vscode/
+cmake-build-debug/
