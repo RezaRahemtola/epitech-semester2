@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+from sys import argv
+from error_handling import error_handling
+from calculs import compute_midpoint, compute_trapezoidal, compute_simpson
+from math import pi
+
+
+def display_help() -> None:
+    print("USAGE")
+    print("\t./110borwein n\n")
+    print("DESCRIPTION")
+    print("\tn\tconstant defining the integral to be computed")
+
+
+def display_result(result: float) -> None:
+    print(f"I{n} = {result:.10f}")
+    print(f"diff = {abs(result - pi / 2):.10f}")
+
+
+if __name__ == "__main__":
+    if len(argv) == 2 and argv[1] == "-h":
+        display_help()
+        exit(0)
+    if error_handling(argv):
+        exit(84)
+    n = int(argv[1])
+    result = compute_midpoint(n)
+    print("Midpoint:")
+    display_result(result)
+    print()
+    result = compute_trapezoidal(n)
+    print("Trapezoidal:")
+    display_result(result)
+    print()
+    result = compute_simpson(n)
+    print("Simpson:")
+    display_result(result)

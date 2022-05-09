@@ -207,6 +207,10 @@
         {
             "name": "pipes - no commands",
             "command": "|"
+        },
+        {
+            "name": "Sleep test",
+            "command": "sleep 5 | cat -e Makefile"
         }
     ]
 }
