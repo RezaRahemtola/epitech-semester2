@@ -27,6 +27,6 @@ int width, int height)
     sfFloatRect bounds = sfSprite_getGlobalBounds(sprite);
 
     mouse.x *= (float) width / size.x;
-    mouse.y *= (float) height/ size.y;
+    mouse.y *= (float) height / size.y;
     return sfFloatRect_contains(&bounds, mouse.x, mouse.y);
 }
