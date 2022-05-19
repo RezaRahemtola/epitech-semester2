@@ -39,21 +39,3 @@ int my_strncmp(const char *s1, const char *s2, int n)
     }
     return (i < n) ? (s1[i] - s2[i]) : (0);
 }
-
-int my_strcount(const char *str, const char *pattern)
-{
-    int count = 0;
-    int len_pattern = my_strlen(pattern);
-
-    if (str == NULL || pattern == NULL)
-        return (0);
-    while (str[0] != '\0') {
-        if (my_strncmp(str, pattern, len_pattern) == 0) {
-            str += len_pattern;
-            count++;
-        } else {
-            str++;
-        }
-    }
-    return (count);
-}

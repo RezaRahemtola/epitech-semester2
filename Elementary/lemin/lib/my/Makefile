@@ -14,12 +14,10 @@ SRC         =   strings/concat.c \
 			    strings/check_type.c \
 			    strings/compare.c \
 			    strings/copy.c \
-			    strings/replace.c \
 			    strings/memory.c \
 			    strings/transform.c \
 			    stringf/my_stringf.c \
 			    numbers/put.c \
-			    numbers/check.c \
 			    numbers/len.c \
 				numbers/maths.c \
 			    arrays/len.c \
@@ -27,10 +25,8 @@ SRC         =   strings/concat.c \
 			    printf/my_printf.c \
 			    printf/my_printf_flags.c \
 			    printf/my_printf_l_ll.c \
-			    my_sort_int_array.c \
 			    my_getnbr.c \
 			    temp.c \
-			    my_strstr.c \
 			    my_int_to_base.c \
 			    my_str_to_word_array.c
 
