@@ -6,7 +6,7 @@
 */
 
 #include <stdbool.h>
-#include "my_string.h"
+#include "my.h"
 
 bool my_str_starts(char const *str, char const *to_find)
 {

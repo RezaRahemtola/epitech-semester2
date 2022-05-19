@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ai.h"
-#include "my_string.h"
 #include "my.h"
 
 static void add_lidar_in_car(car_t *car, char **lidar_info)

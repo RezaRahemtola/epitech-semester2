@@ -7,8 +7,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "my_arrays.h"
-#include "my_string.h"
 #include "my.h"
 #include "ai.h"
 

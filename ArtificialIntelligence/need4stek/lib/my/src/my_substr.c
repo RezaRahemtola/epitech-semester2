@@ -6,8 +6,15 @@
 */
 
 #include <stdlib.h>
-#include "my_string.h"
 #include "my.h"
+
+int my_strlen(char const *str)
+{
+    int size = 0;
+
+    for (size = 0; str[size] != '\0'; size++);
+    return (size);
+}
 
 char *my_substr(char const *str, int start, int end)
 {
