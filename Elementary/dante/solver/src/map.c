@@ -12,7 +12,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "my.h"
+#include "my_strings.h"
+#include "my_arrays.h"
 #include "solver.h"
 
 char **load_map_from_file(const char *filepath)

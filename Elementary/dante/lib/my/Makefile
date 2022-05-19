@@ -7,32 +7,14 @@
 
 SRC_DIR     =   src/
 
-SRC         =   strings/concat.c \
-			    strings/len.c  \
+SRC         = 	strings/len.c  \
 			    strings/put.c \
 			    strings/check_content.c \
-			    strings/check_type.c \
-			    strings/compare.c \
 			    strings/copy.c \
-			    strings/replace.c \
 			    strings/memory.c \
-			    strings/transform.c \
-			    stringf/my_stringf.c \
-			    numbers/put.c \
-			    numbers/check.c \
-			    numbers/len.c \
-				numbers/maths.c \
+				strings/split.c \
 			    arrays/len.c \
-			    arrays/memory.c \
-			    printf/my_printf.c \
-			    printf/my_printf_flags.c \
-			    printf/my_printf_l_ll.c \
-			    my_sort_int_array.c \
-			    my_getnbr.c \
-			    temp.c \
-			    my_strstr.c \
-			    my_int_to_base.c \
-			    my_str_to_word_array.c
+			    arrays/memory.c
 
 OBJ         =    $(addprefix $(SRC_DIR),$(SRC:.c=.o))
 

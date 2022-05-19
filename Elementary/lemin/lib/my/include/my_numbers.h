@@ -7,7 +7,6 @@
 
 #ifndef LIBMY_NUMBERS_H
     #define LIBMY_NUMBERS_H
-    #include <stdbool.h>
 
 // Put
 void my_putnbr(int nb);

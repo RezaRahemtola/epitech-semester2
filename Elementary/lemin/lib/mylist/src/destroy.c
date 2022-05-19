@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "mylist.h"
 
-void obj_destroy(list_t *obj, bool free_data, void (*fptr)(void *data))
+static void obj_destroy(list_t *obj, bool free_data, void (*fptr)(void *data))
 {
     if (free_data)
         (*fptr)(obj->data);

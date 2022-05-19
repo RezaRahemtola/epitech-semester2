@@ -11,7 +11,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <string.h>
-#include "my.h"
+#include "my_arrays.h"
+#include "my_strings.h"
 #include "solver.h"
 
 static bool start_finish_occupied(char **map)

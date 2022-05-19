@@ -8,9 +8,7 @@
 SRC_DIR     =   src/
 
 SRC 		= 	add.c \
-	  			convert.c \
-	  			destroy.c \
-	 			len.c
+	  			destroy.c
 
 OBJ         =    $(addprefix $(SRC_DIR),$(SRC:.c=.o))
 
