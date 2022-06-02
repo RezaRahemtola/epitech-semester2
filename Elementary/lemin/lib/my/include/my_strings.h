@@ -25,7 +25,6 @@ void my_puterror(const char *str);
 // Check
 bool my_char_isnum(char c);
 bool my_str_isnum(char const *str);
-bool my_charinstr(char c, const char *str);
 
 // Compare
 int my_strcmp(const char *s1, const char *s2);
