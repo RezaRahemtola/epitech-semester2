@@ -10,8 +10,6 @@
     #include "mycsfml_audio.h"
     #include "mycsfml_buttons.h"
     #include "mycsfml_clock.h"
-    #include "mycsfml_color.h"
-    #include "mycsfml_draw.h"
     #include "mycsfml_elements.h"
     #include "mycsfml_events.h"
     #include "mycsfml_framebuffer.h"

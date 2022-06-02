@@ -8,11 +8,6 @@
 #include <unistd.h>
 #include "my_strings.h"
 
-void my_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
 void my_putstr(const char *str)
 {
     write(1, str, my_strlen(str));

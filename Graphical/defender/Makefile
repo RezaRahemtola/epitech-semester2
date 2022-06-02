@@ -38,8 +38,8 @@ NAME		=	my_defender
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra
 CPPFLAGS	=	-I include $(INCLIB)
-LDFLAGS		=	-L lib/my -L lib/mycsfml -L lib/mylist
-LDLIBS		=	-lmy -lmycsfml -llist -lm
+LDFLAGS		=	-L lib/my -L lib/mycsfml
+LDLIBS		=	-lmy -lmycsfml -lm
 LDCSFML		=	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 all:		$(NAME)
@@ -50,7 +50,6 @@ $(NAME):	$(OBJ) libs
 libs:
 			make -C lib/my
 			make -C lib/mycsfml
-			make -C lib/mylist
 
 clean:
 			$(RM) $(OBJ)
@@ -59,7 +58,6 @@ fclean:		clean
 			$(RM) $(NAME)
 			make fclean -C lib/my -s
 			make fclean -C lib/mycsfml -s
-			make fclean -C lib/mylist -s
 
 debug:		CFLAGS += -g
 debug:		re

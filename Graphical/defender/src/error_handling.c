@@ -70,13 +70,8 @@ static bool check_file(const char *filepath)
 
 bool check_errors(int argc, char **argv)
 {
-    char *str = NULL;
-
     if (argc != 1 && argc != 2) {
-        str = my_stringf("%s: bad arguments: %d", argv[0], argc - 1);
-        my_puterror(str);
-        my_puterror(" given but 1 required\nretry with -h\n");
-        free(str);
+        my_putstr("Bad argument\nretry with -h\n");
         return (true);
     }
     if (check_file(argv[1])) {

@@ -20,6 +20,5 @@ framebuffer_t *framebuffer_create(int width, int height, int bpp);
 void framebuffer_destroy(framebuffer_t *fb);
 void framebuffer_fill(framebuffer_t *fb, sfColor color);
 void put_pixel(framebuffer_t *fb, unsigned int x, unsigned int y, sfColor c);
-sfColor get_pixel(framebuffer_t *fb, unsigned int x, unsigned int y);
 
 #endif /* !MYCSFML_FRAMEBUFFER_H_ */

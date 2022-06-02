@@ -40,14 +40,3 @@ void put_pixel(framebuffer_t *fb, unsigned int x, unsigned int y, sfColor col)
     fb->pixels[(y * fb->width + x) * (fb->bpp / 8) + 2] = col.b;
     fb->pixels[(y * fb->width + x) * (fb->bpp / 8) + 3] = col.a;
 }
-
-sfColor get_pixel(framebuffer_t *fb, unsigned int x, unsigned int y)
-{
-    sfColor color;
-
-    color.r = fb->pixels[(y * fb->width + x) * (fb->bpp / 8)];
-    color.g = fb->pixels[(y * fb->width + x) * (fb->bpp / 8) + 1];
-    color.b = fb->pixels[(y * fb->width + x) * (fb->bpp / 8) + 2];
-    color.a = fb->pixels[(y * fb->width + x) * (fb->bpp / 8) + 3];
-    return (color);
-}
