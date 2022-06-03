@@ -34,18 +34,3 @@ int my_strcmp(char const *str1, char const *str2)
     }
     return (result);
 }
-
-int my_strncmp(char const *str1, char const *str2, int n)
-{
-    int result = 0;
-
-    for (int i = 0; i < n && str1[i] != '\0' && str2[i] != '\0'; i++) {
-        if (str1[i] != str2[i] && result == 0) {
-            result = str1[i] - str2[i];
-        }
-    }
-    if (result == 0 ){
-        result = check_size(str1, my_strlen(str2), n);
-    }
-    return (result);
-}

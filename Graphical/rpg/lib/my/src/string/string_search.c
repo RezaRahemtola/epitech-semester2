@@ -5,8 +5,7 @@
 ** String search utilities
 */
 
-#include <string.h>
-#include "my.h"
+#include <stddef.h>
 
 char *my_strchr(char *str, char c)
 {
@@ -14,14 +13,4 @@ char *my_strchr(char *str, char c)
         if (*str == c)
             return str;
     return NULL;
-}
-
-char *my_strrchr(char *str, char c)
-{
-    char * result = NULL;
-
-    for (; *str != '\0'; str++)
-        if (*str == c)
-            result = str;
-    return result;
 }

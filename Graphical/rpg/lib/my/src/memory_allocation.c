@@ -8,22 +8,6 @@
 #include <stdlib.h>
 #include "my.h"
 
-void *my_realloc(void *pointer, size_t old_size, size_t size)
-{
-    void *result = NULL;
-
-    if (pointer == NULL)
-        return malloc(size);
-    if (size == 0)
-        return free(pointer), NULL;
-    result = malloc(size);
-    if (result == NULL)
-        return NULL;
-    my_memcpy(result, pointer, old_size);
-    free(pointer);
-    return result;
-}
-
 void *my_calloc(size_t element_count, size_t element_size)
 {
     void *result = NULL;
