@@ -95,15 +95,14 @@ NAME		=	my_rpg
 
 HEADERS    		=	include/
 MY_HEADERS 		=	lib/my/include/
-LIST_HEADERS	=	lib/mylist/include/
 CSFML_HEADERS	=	lib/mycsfml/include/
 
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra
 CPPFLAGS	=	-iquote $(HEADERS) -iquote $(MY_HEADERS) \
-				-iquote $(LIST_HEADERS) -iquote $(CSFML_HEADERS)
-LDFLAGS		=	-L lib/my/ -L lib/mycsfml -L lib/mylist
-LDLIBS		=	-lmy -lmycsfml -llist
+				-iquote $(CSFML_HEADERS)
+LDFLAGS		=	-L lib/my/ -L lib/mycsfml
+LDLIBS		=	-lmy -lmycsfml
 LDCSFML		=	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 all:		$(NAME)
@@ -113,18 +112,15 @@ $(NAME):	$(OBJ) libs
 
 libs:
 			make -C lib/my/
-			make -C lib/mylist
 			make -C lib/mycsfml
 
 clean:
 			$(RM) $(OBJ)
 			make -C lib/my clean
-			make -C lib/mylist clean
 			make -C lib/mycsfml clean
 
 fclean:		clean
 			make fclean -C lib/my
-			make fclean -C lib/mylist
 			make fclean -C lib/mycsfml
 			$(RM) $(NAME)
 

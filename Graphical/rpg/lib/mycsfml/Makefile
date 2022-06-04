@@ -9,16 +9,8 @@ SRC_DIR     =   src/
 
 SRC         = 	audio.c \
 				buttons.c \
-	  			clock.c \
-	  			color.c \
-	  			draw.c \
 	  			elements.c \
 	  			events.c \
-	  			framebuffer.c \
-	  			game_object/create_destroy.c \
-	  			game_object/display.c \
-	  			game_object/move.c \
-	  			game_object/utils.c \
 	  			text.c \
 	  			window.c
 
