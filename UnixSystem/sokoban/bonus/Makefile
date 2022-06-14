@@ -23,7 +23,7 @@ NAME           =    my_sokoban_bonus
 
 CC             =    gcc
 CFLAGS         =    -Wall -Wextra
-CPPFLAGS       =    -I include
+CPPFLAGS       =    -I include -I ../lib/my/include
 LDFLAGS        =    -L ../lib/my
 LDLIBS         =    -lmy -lncurses
 

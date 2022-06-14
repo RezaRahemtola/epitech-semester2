@@ -12,7 +12,6 @@
 int my_arraylen(char **array);
 
 // Memory
-char **my_malloc_2d_array(int nb_rows, int nb_cols);
 void my_free_2d_array(char **array);
 
 #endif /* !LIBMY_ARRAYS_H */

@@ -23,7 +23,7 @@ NAME           =    unit_tests
 
 CC             =    gcc
 CFLAGS         =    -Wall -Wextra --coverage
-CPPFLAGS       =    -I ../include
+CPPFLAGS       =    -I ../include -I ../lib/my/include
 LDFLAGS        =    -L ../lib/my
 LDLIBS         =    -lmy -lcriterion
 

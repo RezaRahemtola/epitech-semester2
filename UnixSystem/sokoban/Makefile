@@ -20,7 +20,7 @@ NAME           =    my_sokoban
 
 CC             =    gcc
 CFLAGS         =    -Wall -Wextra
-CPPFLAGS       =    -I include
+CPPFLAGS       =    -I include -I lib/my/include
 LDFLAGS        =    -L lib/my
 LDLIBS         =    -lmy -lncurses
 

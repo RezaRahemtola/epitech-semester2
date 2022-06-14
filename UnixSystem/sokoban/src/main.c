@@ -9,9 +9,9 @@
 
 static void disp_usage(void)
 {
-    my_printf("USAGE\n\t./my_sokoban map\nDESCRIPTION\n\tmap file repres");
-    my_printf("enting the warehouse map, containing '#' for walls, 'P' for ");
-    my_printf("the player, 'X' for boxes and 'O' for storage locations.\n");
+    my_putstr("USAGE\n\t./my_sokoban map\nDESCRIPTION\n\tmap file repres");
+    my_putstr("enting the warehouse map, containing '#' for walls, 'P' for ");
+    my_putstr("the player, 'X' for boxes and 'O' for storage locations.\n");
 }
 
 int main(int argc, char **argv)
