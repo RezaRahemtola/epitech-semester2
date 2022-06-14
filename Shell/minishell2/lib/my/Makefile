@@ -19,16 +19,10 @@ SRC         =   strings/concat.c \
 			    strings/transform.c \
 			    stringf/my_stringf.c \
 			    numbers/put.c \
-			    numbers/check.c \
 			    numbers/len.c \
 				numbers/maths.c \
 			    arrays/len.c \
 			    arrays/memory.c \
-				arrays/copy.c \
-			    printf/my_printf.c \
-			    printf/my_printf_flags.c \
-			    printf/my_printf_l_ll.c \
-			    my_sort_int_array.c \
 			    my_getnbr.c \
 			    temp.c \
 			    my_strstr.c \

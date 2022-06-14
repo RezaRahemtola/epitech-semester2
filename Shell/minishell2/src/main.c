@@ -8,12 +8,12 @@
 #include <signal.h>
 #include <unistd.h>
 #include "minishell.h"
-#include "my.h"
+#include "my_strings.h"
 
 static void sigint_handler(int param)
 {
     if (isatty(0))
-        my_printf("\n$> ");
+        my_putstr("\n$> ");
     param = param;
 }
 

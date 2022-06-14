@@ -14,8 +14,10 @@ int my_env(char **argv, list_t **env)
     list_t *list = *env;
 
     (void) argv;
-    for (; list != NULL; list = list->next)
-        my_printf("%s\n", list->data);
+    for (; list != NULL; list = list->next) {
+        my_putstr(list->data);
+        my_putchar('\n');
+    }
     return (0);
 }
 

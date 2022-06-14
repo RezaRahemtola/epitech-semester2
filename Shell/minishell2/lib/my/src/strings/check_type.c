@@ -14,15 +14,6 @@ bool my_char_isalpha(char c)
     return (false);
 }
 
-bool my_str_isalpha(const char *str)
-{
-    for (int i = 0; str[i] != '\0'; i++) {
-        if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
-            return (false);
-    }
-    return (true);
-}
-
 bool my_char_isnum(char c)
 {
     if (c >= '0' && c <= '9')
