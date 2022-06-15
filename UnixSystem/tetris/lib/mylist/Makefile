@@ -8,7 +8,6 @@
 SRC_DIR     =   src/
 
 SRC 		= 	add.c \
-	  			convert.c \
 	  			destroy.c \
 	 			len.c
 

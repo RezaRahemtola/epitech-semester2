@@ -25,8 +25,4 @@ void mylist_destroy(list_t *list, bool free_data, void (*fptr)(void *data));
 // Len
 int mylist_len(list_t *list);
 
-// Convert
-char **mylist_to_array(list_t *list, char *(*fptr)(const char *str));
-list_t *array_to_mylist(char **array, char *(*fptr)(const char *str));
-
 #endif /* !LIBLIST_H */
