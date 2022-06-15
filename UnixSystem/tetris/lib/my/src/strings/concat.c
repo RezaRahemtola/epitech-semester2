@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "my_strings.h"
 
-char *my_strcat(char *dest, char *src, bool free_src)
+static char *my_strcat(char *dest, char *src, bool free_src)
 {
     int i = 0;
     int len_dest = my_strlen(dest);
@@ -19,21 +19,6 @@ char *my_strcat(char *dest, char *src, bool free_src)
         dest[len_dest + i] = src[i];
         i++;
     }
-    dest[len_dest + i] = '\0';
-    if (free_src)
-        free(src);
-    return (dest);
-}
-
-char *my_strncat(char *dest, char *src, int nb, bool free_src)
-{
-    int i = 0;
-    int len_dest = my_strlen(dest);
-
-    if (src == NULL)
-        return (dest);
-    for (; src[i] != '\0' && i < nb; i++)
-        dest[len_dest + i] = src[i];
     dest[len_dest + i] = '\0';
     if (free_src)
         free(src);

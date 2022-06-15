@@ -15,11 +15,4 @@ void my_putnbr(int nb);
 // Len
 int my_nbrlen(int nb);
 
-// Check
-bool my_nbr_isprime(int nb);
-
-// Maths
-int my_pow(int nb, int p);
-int my_sqrt(int nb);
-
 #endif /* !LIBMY_NUMBERS_H */

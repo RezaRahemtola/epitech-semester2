@@ -30,25 +30,3 @@ char *int_to_base(unsigned long long int nb, char *base)
     }
     return (my_revstr(result));
 }
-
-static int get_char_pos(char c, char *str)
-{
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (str[i] == c)
-            return (i);
-    }
-    return (0);
-}
-
-int base_to_int(char *nb, char *base)
-{
-    int base_len = my_strlen(base);
-    int nb_len = my_strlen(nb) - 1;
-    int result = 0;
-
-    for (int i = 0; nb[i] != '\0'; i++) {
-        result += get_char_pos(nb[i], base) * my_pow(base_len, nb_len);
-        nb_len--;
-    }
-    return (result);
-}
